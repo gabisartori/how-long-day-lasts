@@ -20,5 +20,6 @@ location = loc.geocode(place)
 latitude = location.latitude
 day = datetime.now().timetuple().tm_yday
 
-print(day_length(latitude, day))
+duration_in_hours = day_length(latitude, day)
 
+print(f'{int(duration_in_hours)}h{round(60*(duration_in_hours-int(duration_in_hours)))}min')
